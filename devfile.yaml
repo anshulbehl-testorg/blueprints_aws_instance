@@ -21,4 +21,4 @@ commands:
       workingDir: "${PROJECTS_SOURCE}"
       group:
         isDefault: true
-        kind: build
+        kind: run
