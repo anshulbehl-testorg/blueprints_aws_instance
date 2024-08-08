@@ -17,8 +17,8 @@ commands:
   - id: install-collections
     exec:
       component: tooling-container
-      commandLine: "ansible-galaxy collection install -r collections/requirements.yml -p /home/user/.ansible/collections/"
-      workingDir: "${PROJECTS_SOURCE}"
+      commandLine: "ansible-galaxy collection install -r collections/requirements.yml"
+      workingDir: "${PROJECT_SOURCE}"
       group:
         isDefault: true
         kind: run
