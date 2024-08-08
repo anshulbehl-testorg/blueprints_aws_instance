@@ -13,3 +13,9 @@ components:
       env:
         - name: KUBEDOCK_ENABLED
           value: "true"
+commands:
+  - id: Install collections
+    exec:
+      component: tooling-container
+      commandLine: "ansible-galaxy collection install -r collections/requirements.yml"
+      workingDir: "${PROJECTS_ROOT}"
