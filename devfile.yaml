@@ -1,3 +1,4 @@
+---
 schemaVersion: 2.2.2
 metadata:
   name: ansible-demo
@@ -9,7 +10,7 @@ components:
       memoryLimit: 6Gi
       cpuRequest: 250m
       cpuLimit: 2000m
-      args: ["tail", "-f", "/dev/null"]
+      args: [tail, -f, /dev/null]
       env:
         - name: KUBEDOCK_ENABLED
           value: "true"
@@ -17,8 +18,8 @@ commands:
   - id: install-collections
     exec:
       component: tooling-container
-      commandLine: "ansible-galaxy collection install -r collections/requirements.yml"
-      workingDir: "${PROJECT_SOURCE}"
+      commandLine: ansible-galaxy collection install -r collections/requirements.yml
+      workingDir: ${PROJECT_SOURCE}
 
 events:
   postStart:
